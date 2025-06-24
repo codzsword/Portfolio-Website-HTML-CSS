@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.dark {
+    --bg-color1: #101828;
+    --color1: #fff;
+    --border-color: hsl(0 0% 20%);
+}
+
+body:not(.dark) {
+    --bg-color1: #ECF3F9;
+    --color1: #303030;
+    --border-color: hsl(0 0% 80%);
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+
+h1 strong {
+    font-weight: 800;
+    background: linear-gradient(90deg, #805AF5 0%, #CE99FF 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h3 {
+    color: var(--color1);
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+}
+
+p {
+    color: var(--color1);
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    background-color: var(--bg-color1);
+}
+
+
+
+/*---------------- Large devices (desktops, 992px and up)  -----------*/
+
+@media (min-width: 768px) {}
+
+.theme-toggle {
+    border: none;
+    background-color: transparent;
+}
+
+.theme-toggle .bx-moon,
+.theme-toggle .bx-sun {
+    cursor: pointer;
+    color: #9f9e99;
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+    transition: all 0.4s;
+}
+
+body:not(.dark) .theme-toggle .bx-sun {
+    display: none;
+}
+
+body.dark .theme-toggle .bx-moon {
+    display: none;
+}
